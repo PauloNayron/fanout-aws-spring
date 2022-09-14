@@ -9,3 +9,6 @@ cloud:
     credentials:
       access-key: ${ACCESS_KEY}
       secret-key: ${SECRET_KEY}
+
+sqs:
+  financial-purchase: ${FINANCIAL_PURCHASE_SQS}
