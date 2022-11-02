@@ -13,7 +13,10 @@ public class PurchaseTopicServiceSNS implements PurchaseTopicService {
   private final AmazonSNSClient amazonSNSClient;
   @Override
   public void publish(Purchase purchase) {
-    PublishRequest publishRequest = new PublishRequest("arn:aws:sns:us-east-1:950890890944:purchase-topic", purchase.toString());
+    PublishRequest publishRequest = new PublishRequest(
+            "arn:aws:sns:us-east-1:950890890944:purchase-topic",
+            purchase.toString()
+    );
     amazonSNSClient.publish(publishRequest);
   }
 }
