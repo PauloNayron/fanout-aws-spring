@@ -15,11 +15,11 @@ spring:
   data:
     mongodb:
       authentication-database: admin
-      password: password
-      username: username
-      database: purchase
-      port: 27017
-      host: localhost
+      password: ${DATABASE_PASSWORD}
+      username: ${DATABASE_USERNAME}
+      database: ${DATABASE_NAME}
+      port: ${DATABASE_PORT}
+      host: ${DATABASE_HOST}
   jpa:
     show-sql: true
     hibernate:
