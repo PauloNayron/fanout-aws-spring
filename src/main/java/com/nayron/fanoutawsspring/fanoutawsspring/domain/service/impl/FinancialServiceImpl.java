@@ -4,11 +4,11 @@ import com.nayron.fanoutawsspring.fanoutawsspring.domain.entity.Financial;
 import com.nayron.fanoutawsspring.fanoutawsspring.domain.entity.Purchase;
 import com.nayron.fanoutawsspring.fanoutawsspring.domain.repository.FinancialRepository;
 import com.nayron.fanoutawsspring.fanoutawsspring.domain.service.FinancialService;
-import com.nayron.fanoutawsspring.fanoutawsspring.infraestructure.repository.financial.dao.FinancialDocument;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -27,5 +27,15 @@ public class FinancialServiceImpl implements FinancialService {
                 .amount(BigDecimal.TEN)
                 .build();
         return this.addFinancial(financial);
+    }
+
+    @Override
+    public List<Financial> getAll() {
+        return financialRepository.getAll();
+    }
+
+    @Override
+    public Financial getById(String id) {
+        return financialRepository.getById(id);
     }
 }
