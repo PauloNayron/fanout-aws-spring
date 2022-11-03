@@ -2,6 +2,7 @@ package com.nayron.fanoutawsspring.fanoutawsspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 @SpringBootApplication(
 				exclude = {
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 								org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration.class
 				}
 )
+@ConfigurationPropertiesScan("com.nayron.fanoutawsspring.fanoutawsspring.application.properties")
 public class FanoutAwsSpringApplication {
 
 	public static void main(String[] args) {

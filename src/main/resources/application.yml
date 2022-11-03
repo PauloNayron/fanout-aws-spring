@@ -26,3 +26,5 @@ spring:
       ddl-auto: update
 sqs:
   financial-purchase: ${FINANCIAL_PURCHASE_SQS}
+topic:
+  purchase: ${PURCHASE_TOPIC}
