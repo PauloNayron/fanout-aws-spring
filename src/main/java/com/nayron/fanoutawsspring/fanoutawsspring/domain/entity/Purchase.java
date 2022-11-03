@@ -17,4 +17,18 @@ public class Purchase {
   private String id;
   private String productId;
   private Long quantity;
+
+  public Purchase(Purchase purchase) {
+    this.id = purchase.getId();
+    this.productId = purchase.getProductId();
+    this.quantity = purchase.getQuantity();
+  }
+
+  public Purchase toEntity() {
+    return Purchase.builder()
+            .id(this.id)
+            .productId(this.productId)
+            .quantity(this.quantity)
+            .build();
+  }
 }

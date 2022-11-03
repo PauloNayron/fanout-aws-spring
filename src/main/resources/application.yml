@@ -8,6 +8,21 @@ cloud:
     credentials:
       access-key: ${ACCESS_KEY}
       secret-key: ${SECRET_KEY}
-
+spring:
+  mvc:
+    format:
+      date=yyyy-MM-dd:
+  data:
+    mongodb:
+      authentication-database: admin
+      password: password
+      username: username
+      database: purchase
+      port: 27017
+      host: localhost
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 sqs:
   financial-purchase: ${FINANCIAL_PURCHASE_SQS}
