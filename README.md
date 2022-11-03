@@ -8,4 +8,6 @@ flowchart LR
     topic -.-> financial-queue <--> financial-service
     topic -.-> accounting-queue <--> accounting-service 
     topic -.-> inventory-queue <--> inventory-service 
+    
+    financial-service --> db[(MongoDB)]
 ```
